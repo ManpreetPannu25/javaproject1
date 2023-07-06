@@ -1,12 +1,12 @@
-package ConditionPackage;
+package conditionPackage;
 
 import java.util.Scanner;
 
-public class cassinoMain {
+public class CassinoMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-   cassinoEntry customerAge = new cassinoEntry();
+   CassinoEntry customerAge = new CassinoEntry();
    Scanner sc =new Scanner(System.in);
    System.out.println("Enter your age");
    

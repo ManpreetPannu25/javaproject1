@@ -1,6 +1,6 @@
-package ConditionPackage;
+package conditionPackage;
 
-public class cassinoEntry {
+public class CassinoEntry {
     int age;
     
     
@@ -8,7 +8,7 @@ public class cassinoEntry {
     
     
     void entryRequirement () {
-    	if (age>= 18 ) {
+    	if (age>= 20 ) {
     		System.out.println("Customer can enter the cassino");
     	}
     	else {
