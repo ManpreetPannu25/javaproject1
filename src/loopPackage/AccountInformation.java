@@ -9,20 +9,24 @@ public class AccountInformation {
 	String enteredPassword;
 	int failAttempts;
 
-	void verifyUserPassword() {
-		while (failAttempts <= 3) {
+	void verifyUserIdAndPassword() {
+		while (failAttempts < 3) {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter User ID");
+			enteredUserId = sc.next();
+			System.out.println("Enter Password");
+			enteredPassword = sc.next();
 			if ((enteredUserId.equals(savedUserId)) && (enteredPassword.equals(savedPassword))) {
 				System.out.println("You are logged in to the application");
 				break;
 			} else {
 				System.out.println("Incorrect User Id or password.Try again");
 
-				failAttempts++;
+			}
+			failAttempts++;
 
-				if (failAttempts > 3) {
-					System.out.println("Account locked");
-				}
-
+			if (failAttempts == 3) {
+				System.out.println("Account locked");
 			}
 		}
 	}

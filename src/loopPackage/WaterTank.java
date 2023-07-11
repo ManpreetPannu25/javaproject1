@@ -2,16 +2,17 @@ package loopPackage;
 
 public class WaterTank {
 	int tankFinalCapacity;
+	int waterLevel;
 
 	void tankFillingMechanism() {
-		while (tankFinalCapacity <= 100) {
-			System.out.println("Tank capacity " + tankFinalCapacity);
+		while (waterLevel <= tankFinalCapacity) {
 
-			if (tankFinalCapacity == 100) {
-				System.out.println("Water capacity has reached to maximum of 100 litres...Stop adding more water");
+			if (waterLevel == tankFinalCapacity) {
+				System.out.println("Water capacity has reached to its maximum...Stop adding more water");
 				break;
 			}
-			tankFinalCapacity += 10;
+			System.out.println("Tank water level is " + waterLevel + "litres");
+			waterLevel += 10;
 		}
 	}
 }
