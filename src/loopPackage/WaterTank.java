@@ -1,18 +1,22 @@
 package loopPackage;
 
 public class WaterTank {
-	int tankFinalCapacity;
-	int waterLevel;
+	int tankTotalCapacity = 100;
+	double waterLevel = 0;
+	int bucketCapacity = 10;
+	double tankMaxCapacity = 91;// assumed max water capacity for the tank to avoid overflow
+	double requiredWater; // (water required at the end to fill the tank at its exact Max capacity,despite bucket capacity)
 
 	void tankFillingMechanism() {
-		while (waterLevel <= tankFinalCapacity) {
-
-			if (waterLevel == tankFinalCapacity) {
-				System.out.println("Water capacity has reached to its maximum...Stop adding more water");
+		while (waterLevel <= tankTotalCapacity) {
+			if (waterLevel >= tankMaxCapacity) {
+				requiredWater = (bucketCapacity - (waterLevel - tankMaxCapacity));
+				System.out.println("Add another " + requiredWater
+						+ " litres water on top of it,to fill the tank at its max water Level");
 				break;
 			}
-			System.out.println("Tank water level is " + waterLevel + "litres");
-			waterLevel += 10;
+			System.out.println("Tank water level is " + waterLevel + " litres ");
+			waterLevel += bucketCapacity;
 		}
 	}
 }
