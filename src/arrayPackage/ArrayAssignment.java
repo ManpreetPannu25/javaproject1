@@ -16,9 +16,7 @@ public class ArrayAssignment {
 	Scanner sc = new Scanner(System.in);
 
 	void findingProductName() {
-		System.out.println(
-				"Please type the Brand name(Samsung/Google/Apple) to see the available products in that category");
-		enteredBrandName = sc.next();
+
 		if (enteredBrandName.equals(brandName1)) {
 			System.out.println("Here is the list of available products under brand Samsung");
 			for (int i = 0; i < samsungArray.length; i++) {
@@ -39,30 +37,49 @@ public class ArrayAssignment {
 		}
 	}
 
-	void verifyEnteredProducts() {
-
+	void verifySelectedProduct() {
 		System.out.println("Please Enter One product Name from the list");
-		enteredProduct = sc.next();
-		for (int i = 0; i < samsungArray.length; i++) {
-			if (enteredProduct.equals(samsungArray[i])) {
-				System.out.println("Product selected is " + enteredProduct);
-		break;
-		}}
-		for (int i = 0; i < googleArray.length; i++) {
-			if (enteredProduct.equals(googleArray[i])) {
-				System.out.println("Product selected is " + enteredProduct);
-				break;
+		enteredProduct = sc.nextLine();
+		boolean flag = false;
+		switch (enteredBrandName) {
+		case "Samsung":
+			for (int i = 0; i < samsungArray.length; i++) {
+				if (enteredProduct.equals(samsungArray[i])) {
+					flag = true;
+				}
 			}
-		}
-		for (int i = 0; i < appleArray.length; i++) {
-			if (enteredProduct.equals(appleArray[i])) {
+			if (flag)
 				System.out.println("Product selected is " + enteredProduct);
-				break;
-			} 
-			else {
+			else
 				System.out.println("Please select a product from the list");
-				break;
+
+			break;
+
+		case "Google":
+			for (int i = 0; i < googleArray.length; i++) {
+				if (enteredProduct.equals(googleArray[i])) {
+					flag = true;
+				}
 			}
+			if (flag)
+				System.out.println("Product selected is " + enteredProduct);
+			else
+				System.out.println("Please select a product from the list");
+
+			break;
+
+		case "Apple":
+			for (int i = 0; i < appleArray.length; i++) {
+				if (enteredProduct.equals(appleArray[i])) {
+					flag = true;
+				}
+			}
+			if (flag)
+				System.out.println("Product selected is " + enteredProduct);
+			else
+				System.out.println("Please select a product from the list");
+			break;
+
 		}
 	}
 }
