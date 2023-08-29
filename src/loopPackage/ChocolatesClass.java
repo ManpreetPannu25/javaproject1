@@ -10,8 +10,8 @@ public class ChocolatesClass {
 //			if (chocolates==finalNumberOfChocolates) {
 //				break;
 		}
-			System.out.println("Number of chocolates in a box " + chocolates);
-			chocolates += 5;
+		System.out.println("Number of chocolates in a box " + chocolates);
+		chocolates += 5;
 
-		}
 	}
+}

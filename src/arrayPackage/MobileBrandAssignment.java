@@ -92,5 +92,6 @@ public class MobileBrandAssignment {
 			System.out.println("Please enter available Brand name including Samsung/Google/Apple only");
 			break;
 		}
+
 	}
 }

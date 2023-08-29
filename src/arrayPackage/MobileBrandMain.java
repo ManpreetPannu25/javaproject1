@@ -11,6 +11,7 @@ public class MobileBrandMain {
 		System.out.println(
 				"Please type the Brand name(Samsung/Google/Apple) to see the available products in that category");
 		phones.enteredBrandName = sc.next();
+
 		phones.verifySelectedBrandAndItsProducts();
 
 	}

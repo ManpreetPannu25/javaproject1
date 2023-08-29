@@ -2,7 +2,7 @@ package loopPackage;
 
 public class WaterTank {
 	int tankTotalCapacity = 100;
-	double waterLevel = 67;
+	double waterLevel = 50;
 	int bucketCapacity = 10;
 	double tankMaxCapacity = 95;// assumed max water capacity for the tank to avoid overflow
 	double requiredWater; // (water required at the end to fill the tank at its exact Max capacity,despite
@@ -24,6 +24,6 @@ public class WaterTank {
 			System.out.println("Tank water level is " + waterLevel + " litres ");
 			waterLevel += bucketCapacity;
 		}
-
+		System.out.println("Tank water level is " + waterLevel + " litres ");
 	}
 }
